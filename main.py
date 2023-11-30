@@ -4,7 +4,7 @@ from tkinter import *
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
-def get_details():
+def save():
     website_value = site_input.get()
     username_value = username_input.get()
     password_value = password_input.get()
@@ -48,7 +48,7 @@ password_input.grid(row=3, column=1)
 password_button = Button(text="Generate Password", width=11)
 password_button.grid(row=3, column=2)
 
-add_to_list_button = Button(text="Add", width=33, command=get_details)
+add_to_list_button = Button(text="Add", width=33, command=save)
 add_to_list_button.grid(row=4, column=1, columnspan=2)
 
 window.mainloop()
