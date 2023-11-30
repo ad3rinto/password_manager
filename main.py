@@ -11,11 +11,12 @@ def save():
     password_value = password_input.get()
 
     if len(website_value) == 0 or len(username_value) == 0 or len(password_value) == 0:
-        messagebox.showinfo(title="Opps", message="You cant leave blanks")
+        messagebox.showinfo(title="Opps", message="You cant leave fields blank")
     else:
 
         is_ok = messagebox.askokcancel(title=website_value,
-                                       message=f"These are the details entered: \nEmail: {username_value}\nPassword:{password_value}\nIs it ok to save?")
+                                       message=f"These are the details entered: \nEmail: {username_value}\nPassword:"
+                                               f"{password_value}\nIs it ok to save?")
 
         if is_ok:
             print(f"site: {website_value}, username: {username_value}, password: {password_value}")
